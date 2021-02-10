@@ -1,0 +1,23 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="HyssoftWeb.HyssoftWeb.controller.Parametros_Detail" displayBlock="true">
+	<Page xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="detail" title="Detalles Parámetros Penta" showNavButton="true" navButtonPress="action" action:wiring="\{'navButtonPress':\{'navigation':\{'routeName':'Parametros_Lista'\}\}\}">
+		<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form0">
+						 <sap.ui.layout.form:content>
+					        <sap.ui.core:Title text="Editar Parámetro Penta" id="title1"/>
+					        	<Label text="NOMBRE" id="NAME"/>
+								<Input width="100%" value="{NOMBRE}" id="NOMBRE"/>
+								<Label text="DESCRIPCION" id="DESCRIPTION"/>
+								<Input width="100%" id="DESCRIPCION" value="{DESCRIPCION}"/>
+								<Label text="FECHA" id="DATE"/>
+								<Input width="100%" id="FECHA" value="{FECHA}"/>
+							     <Label text="MODIFICADO" id="MODIFICATE"/>
+							     <Input width="100%" id="MODIFICADO" value="{MODIFICADO}"/>
+					    </sap.ui.layout.form:content>
+					</sap.ui.layout.form:SimpleForm>
+		<FlexBox width="100%" id="box0" justifyContent="Center">
+		    <items>
+		        <Button xmlns="sap.m" text="Modificar" id="button0" press="modificarconsultor" width="150px"/>
+		        <Button xmlns="sap.m" text="Eliminar" id="button1" width="150px" press="onDelete0"/>
+		    </items>
+		</FlexBox>
+	</Page>
+</mvc:View>

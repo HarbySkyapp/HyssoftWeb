@@ -1,0 +1,32 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="HyssoftWeb.HyssoftWeb.controller.Include_Crear">
+	<App>
+		<pages>
+			<Page title="Title" showNavButton="true" navButtonPress="action" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" action:wiring="\{'navButtonPress':\{'navigation':\{'routeName':'Include_Lista'\}\}\}">
+				<content>
+					<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form0">
+						 <sap.ui.layout.form:content>
+					        <sap.ui.core:Title text="Crear Include" id="title1"/>
+					        	<Label text="NOMBRE" id="nombre"/>
+								<Input width="60%" id="NOMBRE"/>
+								<Label text="DESCRIPCION" id="descripcion"/>
+								<Input width="60%" id="DESCRIPCION"/>
+								<Label text="FECHA" id="fecha"/>
+								<Input width="60%" id="FECHA" type="Date"/>
+							    <Label text="PROGRAMA" id="programa_nombre"/>
+							    <ComboBox width="60%" items="{path: '/Programas', sorter: { path: 'NOMBRE' }}" id="PROGRAMA_NOMBRE">
+									<core:Item key="{NOMBRE}" text="{NOMBRE}"/>
+								</ComboBox>
+							     <Label text="CONSULTOR" id="consultor"/>
+							    <ComboBox width="60%" items="{path: '/Consultores', sorter: { path: 'NOMBRE' }}" id="CONSULTOR_CEDULA">
+									<core:Item key="{CEDULA}" text="{NOMBRE}"/>
+								</ComboBox>
+					    </sap.ui.layout.form:content>
+					</sap.ui.layout.form:SimpleForm>
+					<FlexBox width="60%" id="box0" justifyContent="center">
+						<Button xmlns="sap.m" text="Almacenar" id="button0" press="crearinclude"/>
+					</FlexBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

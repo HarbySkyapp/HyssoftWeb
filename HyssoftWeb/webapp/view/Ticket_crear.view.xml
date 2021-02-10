@@ -1,0 +1,28 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="HyssoftWeb.HyssoftWeb.controller.Ticket_crear">
+	<App>
+		<pages>
+			<Page xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" title="Title" showNavButton="true" navButtonPress="action" action:wiring="\{'navButtonPress':\{'navigation':\{'routeName':'Tickets_Lista'\}\}\}">
+				<content>
+					<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form0">
+						 <sap.ui.layout.form:content>
+					        <sap.ui.core:Title text="Crear Ticket" id="title1"/>
+					        	<Label text="TICKET" id="ticket"/>
+								<Input width="100%" id="TICKET"/>
+								<Label text="FECHA" id="fecha"/>
+								<Input width="100%" id="FECHA" type="Date"/>
+								<Label text="MODULO" id="modulo"/>
+								<Input width="100%" id="MODULO"/>
+							     <Label text="DESCRIPCION" id="descripcion"/>
+							     <Input width="100%" id="DESCRIPCION"/>
+							     <Label text="Estado contrato" id="Estado"/>
+							     <Input width="100%" id="ESTADOCONTRATO"/>
+							     <Label text="Empresa" id="nit"/>
+							     <Input width="100%" id="NIT_NIT"/>
+							     <Button xmlns="sap.m" text="Almacenar" id="button0" press="crearticket"/>
+					    </sap.ui.layout.form:content>
+					</sap.ui.layout.form:SimpleForm>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

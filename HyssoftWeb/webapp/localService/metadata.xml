@@ -1,0 +1,178 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+	<edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+		<Schema xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+			xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm"
+			Namespace="default">
+			<EntityType Name="EmpresasType">
+				<Key>
+					<PropertyRef Name="NIT"/>
+				</Key>
+				<Property Name="NIT" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+				<Property Name="NOMBRE" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="PAIS" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="CIUDAD" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="DIRECCION" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="VERSPE" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="FECULTAC" Type="Edm.DateTime"/>
+				<Property Name="CONTVIG" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="FECHAINI" Type="Edm.DateTime"/>
+				<Property Name="FECHAFIN" Type="Edm.DateTime"/>
+				<Property Name="NROCONTRA" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="D_MAX" Type="Edm.Int32"/>
+				<Property Name="DIASCONS" Type="Edm.Int32"/>
+				<Property Name="DPAGO" Type="Edm.Int32"/>
+				<Property Name="ULTFV" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="FECHAFV" Type="Edm.DateTime"/>
+			</EntityType>
+			<EntityType Name="VpnType">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="VPN" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+				<Property Name="USUARIO" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="CLAVE" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="INFORMACION" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="NIT_NIT" Type="Edm.String" MaxLength="5000"/>
+			</EntityType>
+			<EntityType Name="AppHyssoftType">
+				<Key>
+					<PropertyRef Name="CODIGO"/>
+				</Key>
+				<Property Name="CODIGO" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+				<Property Name="NOMBRE" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="PAQUETE" Type="Edm.String" MaxLength="5000"/>
+			</EntityType>
+			<EntityType Name="ConsultoresType">
+				<Key>
+					<PropertyRef Name="CEDULA"/>
+				</Key>
+				<Property Name="CEDULA" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+				<Property Name="NOMBRE" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="CARGO" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="PAIS" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="CIUDAD" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="TELEFONO" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="CELULAR" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="ESTADO" Type="Edm.String" MaxLength="5000"/>
+			</EntityType>
+			<EntityType Name="ContactosType">
+				<Key>
+					<PropertyRef Name="NOMBRE"/>
+				</Key>
+				<Property Name="NOMBRE" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+				<Property Name="CARGO" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="EMAIL" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="TELUNO" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="TELDOS" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="NIT_NIT" Type="Edm.String" MaxLength="5000"/>
+			</EntityType>
+			<EntityType Name="IncludesType">
+				<Key>
+					<PropertyRef Name="NOMBRE"/>
+				</Key>
+				<Property Name="NOMBRE" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+				<Property Name="DESCRIPCION" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="FECHA" Type="Edm.DateTime"/>
+				<Property Name="PROGRAMA_NOMBRE" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="CONSULTOR_CEDULA" Type="Edm.String" MaxLength="5000"/>
+			</EntityType>
+			<EntityType Name="ParametrosPentaType">
+				<Key>
+					<PropertyRef Name="NOMBRE"/>
+				</Key>
+				<Property Name="NOMBRE" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+				<Property Name="DESCRIPCION" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="FECHA" Type="Edm.DateTime"/>
+				<Property Name="MODIFICADO" Type="Edm.String" MaxLength="5000"/>
+			</EntityType>
+			<EntityType Name="PentaEmpresaType">
+				<Key>
+					<PropertyRef Name="PROGRAMA_NOMBRE"/>
+				</Key>
+				<Property Name="DESCRIPCION" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="FECHA" Type="Edm.DateTime"/>
+				<Property Name="NIT_NIT" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="PROGRAMA_NOMBRE" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+				<Property Name="INCLUDE_NOMBRE" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="CONSULTOR_CEDULA" Type="Edm.String" MaxLength="5000"/>
+			</EntityType>
+			<EntityType Name="ProgramasType">
+				<Key>
+					<PropertyRef Name="NOMBRE"/>
+				</Key>
+				<Property Name="NOMBRE" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+				<Property Name="DESCRIPCION" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="CODIGO_CODIGO" Type="Edm.String" MaxLength="5000"/>
+			</EntityType>
+			<EntityType Name="SociedadesType">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="SOCIEDAD" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+				<Property Name="NIT_NIT" Type="Edm.String" MaxLength="5000"/>
+			</EntityType>
+			<EntityType Name="SoporteType">
+				<Key>
+					<PropertyRef Name="TICKET_TICKET"/>
+				</Key>
+				<Property Name="FECHA" Type="Edm.DateTime"/>
+				<Property Name="TIPOSOPORTE" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+				<Property Name="DESCRIPCION" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="SOLUCION" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="HORAS" Type="Edm.Int32"/>
+				<Property Name="TICKET_TICKET" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+				<Property Name="CONSULTOR_CEDULA" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="PROGRAMA_NOMBRE" Type="Edm.String" MaxLength="5000"/>
+			</EntityType>
+			<EntityType Name="TicketType">
+				<Key>
+					<PropertyRef Name="TICKET"/>
+				</Key>
+				<Property Name="TICKET" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+				<Property Name="FECHA" Type="Edm.DateTime"/>
+				<Property Name="MODULO" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="DESCRIPCION" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="ESTADOCONTRATO" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="NIT_NIT" Type="Edm.String" MaxLength="5000"/>
+			</EntityType>
+			<EntityType Name="UsuariosType">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="MANDANTE" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="USUARIO" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+				<Property Name="CLAVE" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="NIT_NIT" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="AMBSAP_AMBSAP" Type="Edm.String" MaxLength="5000"/>
+			</EntityType>
+			<EntityType Name="AmbienteSAPType">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="AMBSAP" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+				<Property Name="RUTA" Type="Edm.String" MaxLength="5000"/>
+				<Property Name="NIT_NIT" Type="Edm.String" MaxLength="5000"/>
+			</EntityType>
+			<EntityContainer Name="v2" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="Empresas" EntityType="default.EmpresasType"/>
+				<EntitySet Name="Vpn" EntityType="default.VpnType"/>
+				<EntitySet Name="AppHyssoft" EntityType="default.AppHyssoftType"/>
+				<EntitySet Name="Consultores" EntityType="default.ConsultoresType"/>
+				<EntitySet Name="Contactos" EntityType="default.ContactosType"/>
+				<EntitySet Name="Includes" EntityType="default.IncludesType"/>
+				<EntitySet Name="ParametrosPenta" EntityType="default.ParametrosPentaType"/>
+				<EntitySet Name="PentaEmpresa" EntityType="default.PentaEmpresaType"/>
+				<EntitySet Name="Programas" EntityType="default.ProgramasType"/>
+				<EntitySet Name="Sociedades" EntityType="default.SociedadesType"/>
+				<EntitySet Name="Soporte" EntityType="default.SoporteType"/>
+				<EntitySet Name="Ticket" EntityType="default.TicketType"/>
+				<EntitySet Name="Usuarios" EntityType="default.UsuariosType"/>
+				<EntitySet Name="AmbienteSAP" EntityType="default.AmbienteSAPType"/>
+			</EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,659 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "HyssoftWeb.HyssoftWeb",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponentForManifest",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"Hyssoft.xsodata": {
+				"uri": "/OdataHyssoft/xsodata/Hyssoft.xsodata/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "HyssoftWeb.HyssoftWeb.view.View1",
+			"type": "XML",
+			"async": true,
+			"id": "View1"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "HyssoftWeb.HyssoftWeb.i18n.i18n"
+				}
+			},
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "Hyssoft.xsodata",
+				"preload": true
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "HyssoftWeb.HyssoftWeb.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "RouteView1",
+					"pattern": "RouteView1",
+					"target": [
+						"TargetView1"
+					]
+				},
+				{
+					"name": "empresas_detail",
+					"pattern": "Empresas/{NIT}",
+					"target": [
+						"TargetDetailDos"
+					]
+				},
+				{
+					"name": "consultores_detail",
+					"pattern": "Consultores/{CEDULA}",
+					"target": [
+						"TargetDetail"
+					]
+				},
+				{
+					"name": "usuario_detail",
+					"pattern": "Usuario/{ID}",
+					"target": [
+						"TargetDetailTres"
+					]
+				},
+				{
+					"name": "programas_detail",
+					"pattern": "Programas/{NOMBRE}",
+					"target": [
+						"TargetDetailProgramas"
+					]
+				},
+				{
+					"name": "Vpn_detail",
+					"pattern": "Vpn/{ID}",
+					"target": [
+						"TargetDetailCuatro"
+					]
+				},
+				{
+					"name": "menu",
+					"pattern": "menu",
+					"target": [
+						"menu"
+					]
+				},
+				{
+					"name": "Consultores_Lista",
+					"pattern": "Consultores_Lista",
+					"target": [
+						"Consultores_Lista"
+					]
+				},
+				{
+					"name": "Empresas_Lista",
+					"pattern": "Empresas_Lista",
+					"target": [
+						"Empresas_Lista"
+					]
+				},
+				{
+					"name": "Consultores_Crear",
+					"pattern": "Consultores_Crear",
+					"target": [
+						"Consultores_Crear"
+					]
+				},
+				{
+					"name": "Empresas_Crear",
+					"pattern": "Empresas_Crear",
+					"target": [
+						"Empresas_Crear"
+					]
+				},
+				{
+					"name": "Usuarios_Lista",
+					"pattern": "Usuarios_Lista",
+					"target": [
+						"Usuarios_Lista"
+					]
+				},
+				{
+					"name": "Include_Lista",
+					"pattern": "Include_Lista",
+					"target": [
+						"Include_Lista"
+					]
+				},
+				{
+					"name": "Include_detail",
+					"pattern": "Includes/{NOMBRE}",
+					"target": [
+						"TargetIncludedetail"
+					]
+				},
+				{
+					"name": "Usuarios_crear",
+					"pattern": "Usuarios_crear",
+					"target": [
+						"Usuarios_crear"
+					]
+				},
+				{
+					"name": "Aplicaciones_Lista",
+					"pattern": "Aplicaciones_Lista",
+					"target": [
+						"Aplicaciones_Lista"
+					]
+				},
+				{
+					"name": "Programas_Lista",
+					"pattern": "Programas_Lista",
+					"target": [
+						"Programas_Lista"
+					]
+				},
+				{
+					"name": "Ambientes_Lista",
+					"pattern": "Ambientes_Lista",
+					"target": [
+						"Ambientes_Lista"
+					]
+				},
+				{
+					"name": "Ambientes_detail",
+					"pattern": "/AmbienteSAP{ID}",
+					"target": [
+						"TargetAmbientes_detail"
+					]
+				},
+				{
+					"name": "Contactos_Lista",
+					"pattern": "Contactos_Lista",
+					"target": [
+						"Contactos_Lista"
+					]
+				},
+				{
+					"name": "Include_Lista",
+					"pattern": "Include_Lista",
+					"target": [
+						"Include_Lista"
+					]
+				},
+				{
+					"name": "Sociedades_Lista",
+					"pattern": "Sociedades_Lista",
+					"target": [
+						"Sociedades_Lista"
+					]
+				},
+				{
+					"name": "Penta_Lista",
+					"pattern": "Penta_Lista",
+					"target": [
+						"Penta_Lista"
+					]
+				},
+				{
+					"name": "Tickets_Lista",
+					"pattern": "Tickets_Lista",
+					"target": [
+						"Tickets_Lista"
+					]
+				},
+				{
+					"name": "Soportes_Lista",
+					"pattern": "Soportes_Lista",
+					"target": [
+						"Soportes_Lista"
+					]
+				},
+				{
+					"name": "Vpn_Lista",
+					"pattern": "Vpn_Lista",
+					"target": [
+						"Vpn_Lista"
+					]
+				},
+				{
+					"name": "Ticket_detail",
+					"pattern": "Ticket/{TICKET}",
+					"target": [
+						"Targetticket_detail"
+					]
+				},
+				{
+					"name": "Aplicaciones_detail",
+					"pattern": "AppHyssoft/{CODIGO}",
+					"target": [
+						"Targetaplicaciones_detail"
+					]
+				},
+				{
+					"name": "penta_detail",
+					"pattern": "PentaEmpresa/{PROGRAMA_NOMBRE}",
+					"target": [
+						"Targetpenta_detail"
+					]
+				},
+				{
+					"name": "Ticket_crear",
+					"pattern": "Ticket_crear",
+					"target": [
+						"targetTicket_crear"
+					]
+				},
+				{
+					"name": "Vpn_Crear",
+					"pattern": "Vpn_Crear",
+					"target": [
+						"Vpn_Crear"
+					]
+				},
+				{
+					"name": "Aplicaciones_Crear",
+					"pattern": "Aplicaciones_Crear",
+					"target": [
+						"Aplicaciones_Crear"
+					]
+				},
+				{
+					"name": "Programas_Crear",
+					"pattern": "Programas_Crear",
+					"target": [
+						"Programas_Crear"
+					]
+				},
+				{
+					"name": "Penta_Crear",
+					"pattern": "Penta_Crear",
+					"target": [
+						"Penta_Crear"
+					]
+				},
+				{
+					"name": "Parametros_Lista",
+					"pattern": "Parametros_Lista",
+					"target": [
+						"Parametros_Lista"
+					]
+				},
+				{
+					"name": "Contactos_detail",
+					"pattern": "Contactos/{NOMBRE}",
+					"target": [
+						"TargetContactosDetail"
+					]
+				},
+				{
+					"name": "contactos_crear",
+					"pattern": "contactos_crear",
+					"target": [
+						"TargetContactoscrear"
+					]
+				},
+				{
+					"name": "Soportes_detail",
+					"pattern": "Soporte/{TICKET_TICKET}",
+					"target": [
+						"TargetSoportesdetail"
+					]
+				},
+				{
+					"name": "Soportes_crear",
+					"pattern": "Soportes_crear",
+					"target": [
+						"TargetSoportescrear"
+					]
+				},
+				{
+					"name": "Sociedad_detail",
+					"pattern": "Sociedades/{ID}",
+					"target": [
+						"TargetSociedadetail"
+					]
+				},
+				{
+					"name": "Sociedad_crear",
+					"pattern": "Sociedad_crear",
+					"target": [
+						"TargetSociedadcrear"
+					]
+				},
+				{
+					"name": "Ambientes_crear",
+					"pattern": "Ambientes_crear",
+					"target": [
+						"targetAmbientes_crear"
+					]
+				},
+				{
+					"name": "Include_Crear",
+					"pattern": "Include_Crear",
+					"target": [
+						"Include_Crear"
+					]
+				},
+				{
+					"name": "prueba",
+					"pattern": "prueba",
+					"target": [
+						"prueba"
+					]
+				},
+				{
+					"name": "Contactos_Crear_Dos",
+					"pattern": "Empresa/{NIT}",
+					"target": [
+						"TargetContactosDetailDos"
+					]
+				}
+			],
+			"targets": {
+				"TargetView1": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "View1",
+					"viewName": "View1"
+				},
+				"TargetDetail": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Consultores_Detail"
+				},
+				"TargetIncludedetail": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Include_Detail"
+				},
+				"Include_Lista": {
+					"viewType": "XML",
+					"viewName": "Include_Lista"
+				},
+				"Targetpenta_detail": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Penta_Detail"
+				},
+				"TargetDetailDos": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Empresas_Detail"
+				},
+				"TargetDetailProgramas": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Programas_Detail"
+				},
+				"TargetDetailTres": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Usuarios_Detail"
+				},
+				"Targetaplicaciones_detail": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Aplicaciones_Detail"
+				},
+				"Targetticket_detail": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Ticket_detail"
+				},
+				"targetTicket_crear": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Ticket_crear"
+				},
+				"TargetDetailCuatro": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Vpn_Detail"
+				},
+				"TargetAmbientes_detail": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Ambientesap_detail"
+				},
+				"targetAmbientes_crear": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Ambientes_crear"
+				},
+				"TargetContactosDetail": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Contactos_detail"
+				},
+				"TargetContactosDetailDos": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Contactos_Crear_Dos"
+				},
+				"TargetSoportescrear": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Soportes_crear"
+				},
+				"TargetSoportesdetail": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Soportes_Detail"
+				},
+				"TargetSociedadcrear": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Sociedades_crear"
+				},
+				"TargetSociedadetail": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Sociedades_Detail"
+				},
+				"TargetContactoscrear": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Contactos_crear"
+				},
+				"menu": {
+					"viewType": "XML",
+					"viewName": "menu"
+				},
+				"Consultores_Lista": {
+					"viewType": "XML",
+					"viewName": "Consultores_Lista"
+				},
+				"Empresas_Lista": {
+					"viewType": "XML",
+					"viewName": "Empresas_Lista"
+				},
+				"Consultores_Crear": {
+					"viewType": "XML",
+					"viewName": "Consultores_Crear"
+				},
+				"Empresas_Crear": {
+					"viewType": "XML",
+					"viewName": "Empresas_Crear"
+				},
+				"Vpn_Lista": {
+					"viewType": "XML",
+					"viewName": "Vpn_Lista"
+				},
+				"Usuarios_Lista": {
+					"viewType": "XML",
+					"viewName": "Usuarios_Lista"
+				},
+				"Usuarios_crear": {
+					"viewType": "XML",
+					"viewName": "Usuarios_crear"
+				},
+				"Aplicaciones_Lista": {
+					"viewType": "XML",
+					"viewName": "Aplicaciones_Lista"
+				},
+				"Programas_Lista": {
+					"viewType": "XML",
+					"viewName": "Programas_Lista"
+				},
+				"Ambientes_Lista": {
+					"viewType": "XML",
+					"viewName": "Ambientes_Lista"
+				},
+				"Parametros_Lista": {
+					"viewType": "XML",
+					"viewName": "Parametros_Lista"
+				},
+				"Contactos_Lista": {
+					"viewType": "XML",
+					"viewName": "Contactos_Lista"
+				},
+				"Sociedades_Lista": {
+					"viewType": "XML",
+					"viewName": "Sociedades_Lista"
+				},
+				"Penta_Lista": {
+					"viewType": "XML",
+					"viewName": "Penta_Lista"
+				},
+				"Tickets_Lista": {
+					"viewType": "XML",
+					"viewName": "Tickets_Lista"
+				},
+				"Soportes_Lista": {
+					"viewType": "XML",
+					"viewName": "Soportes_Lista"
+				},
+				"Ticket_detail": {
+					"viewType": "XML",
+					"viewName": "Ticket_detail"
+				},
+				"Ticket_crear": {
+					"viewType": "XML",
+					"viewName": "Ticket_crear"
+				},
+				"Vpn_Crear": {
+					"viewType": "XML",
+					"viewName": "Vpn_Crear"
+				},
+				"Aplicaciones_Crear": {
+					"viewType": "XML",
+					"viewName": "Aplicaciones_Crear"
+				},
+				"Programas_Crear": {
+					"viewType": "XML",
+					"viewName": "Programas_Crear"
+				},
+				"Penta_Crear": {
+					"viewType": "XML",
+					"viewName": "Penta_Crear"
+				},
+				"Soportes_Detail": {
+					"viewType": "XML",
+					"viewName": "Soportes_Detail"
+				},
+				"Soportes_crear": {
+					"viewType": "XML",
+					"viewName": "Soportes_crear"
+				},
+				"Sociedades_Detail": {
+					"viewType": "XML",
+					"viewName": "Sociedades_Detail"
+				},
+				"Sociedades_crear": {
+					"viewType": "XML",
+					"viewName": "Sociedades_crear"
+				},
+				"Include_Crear": {
+					"viewType": "XML",
+					"viewName": "Include_Crear"
+				},
+				"prueba": {
+					"viewType": "XML",
+					"viewName": "prueba"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="HyssoftWeb.HyssoftWeb.controller.View1" displayBlock="true">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+					    <FlexBox width="100%" id="box0" justifyContent="Center">
+					        <items>
+					            <Image src="https://hyssoft.com/wp-content/uploads/2020/07/Piezas-Web-Hyssoft_Perfil.png" width="340px" height="340px" id="image0"/>
+					        </items>
+					    </FlexBox>
+					    <FlexBox width="100%" id="box1" justifyContent="Center">
+					        <items>
+					            <Button xmlns="sap.m" text="Ingresar" id="button0" press="action" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" action:wiring="\{'press':\{'navigation':\{'routeName':'menu'\}\}\}"/>
+					        </items>
+					    </FlexBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

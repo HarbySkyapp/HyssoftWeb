@@ -1,0 +1,27 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="HyssoftWeb.HyssoftWeb.controller.Penta_Detail" displayBlock="true">
+	<Page xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="detail" title="Detalles Penta" showNavButton="true" navButtonPress="action" action:wiring="\{'navButtonPress':\{'navigation':\{'routeName':'Penta_Lista'\}\}\}">
+		<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form0">
+			 <sap.ui.layout.form:content>
+		        <sap.ui.core:Title text="Editar Penta" id="title1"/>
+		        	<Label text="DESCRIPCION" id="DESCRIPTION"/>
+					<Input width="100%" value="{DESCRIPCION}" id="DESCRIPCION"/>
+					<Label text="FECHA" id="DATE"/>
+					<Input width="100%" id="FECHA" value="{FECHA}"/>
+					<Label text="NIT" id="NIT"/>
+					<Input width="100%" id="NIT_NIT" value="{NIT_NIT}"/>
+				     <Label text="PROGRAMA NOMBRE" id="PROGRAMA_NOM"/>
+				     <Input width="100%" id="PROGRAMA_NOMBRE" value="{PROGRAMA_NOMBRE}"/>
+				     <Label text="INCLUDE NOMBRE" id="INCLUDE_NOM"/>
+				     <Input width="100%" id="INCLUDE_NOMBRE" value="{INCLUDE_NOMBRE}"/>
+				     <Label text="CONSULTOR CEDULA" id="CONSULTOR"/>
+				     <Input width="100%" id="CONSULTOR_CEDULA" value="{CONSULTOR_CEDULA}"/>
+		    </sap.ui.layout.form:content>
+		</sap.ui.layout.form:SimpleForm>
+		<FlexBox width="100%" id="box0" justifyContent="Center">
+		    <items>
+		        <Button xmlns="sap.m" text="Modificar" id="button0" press="modificarconsultor" width="150px"/>
+		        <Button xmlns="sap.m" text="Eliminar" id="button1" width="150px" press="onDelete0"/>
+		    </items>
+		</FlexBox>
+	</Page>
+</mvc:View>

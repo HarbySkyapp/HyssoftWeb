@@ -1,0 +1,62 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="HyssoftWeb.HyssoftWeb.controller.menu">
+	<App>
+		<pages>
+			<Page title="{i18n>menu}">
+				<content>
+				    <FlexBox width="100%" id="box0" justifyContent="Center">
+				        <items>
+				            <Image src="https://hyssoft.com/wp-content/uploads/2020/07/Piezas-Web-Hyssoft_Perfil.png" width="240px" height="240px" id="image1"/>
+				        </items>
+				    </FlexBox>
+				    <FlexBox width="100%" id="box1"/>
+				    <FlexBox width="100%" id="box2" justifyContent="Center">
+				        <items>
+				            <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Consultores" id="button0" width="140px" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'prueba'\}\}\}"/>
+				            <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Empresas" id="button9" width="140px" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Empresas_Lista'\}\}\}"/>
+				        </items>
+				    </FlexBox>
+				    <FlexBox width="100%" id="box3" justifyContent="Center">
+				        <items>
+				            <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="VPN" id="button2" width="140px" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Vpn_Lista'\}\}\}"/>
+				            <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Usuarios" id="button10" width="140px" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Usuarios_Lista'\}\}\}"/>
+				        </items>
+				    </FlexBox>
+				    <FlexBox width="100%" id="box4" justifyContent="Center">
+				        <items>
+				            <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Aplicaciones" id="button3" width="140px" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Aplicaciones_Lista'\}\}\}"/>
+				            <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Programas" id="button11" width="140px" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Programas_Lista'\}\}\}"/>
+				        </items>
+				    </FlexBox>
+				    <FlexBox width="100%" id="box5" justifyContent="Center">
+				        <items>
+				            <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Ambientes SAP" id="button4" width="140px" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Ambientes_Lista'\}\}\}"/>
+				            <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Parametros Penta" id="button7" width="140px" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Programas_Lista'\}\}\}"/>
+				        </items>
+				    </FlexBox>
+				    <FlexBox width="100%" id="box6" justifyContent="Center">
+				        <items>
+				            <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Contactos" id="button5" width="140px" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Contactos_Lista'\}\}\}"/>
+				            <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Include" id="button6" width="140px" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Include_Lista'\}\}\}"/>
+				        </items>
+				    </FlexBox>
+				    <FlexBox width="100%" id="box7" justifyContent="Center">
+				        <items>
+				        <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Sociedades" id="button8" width="140px" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Sociedades_Lista'\}\}\}"/>
+				        <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Penta" id="button14" width="140px" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Penta_Lista'\}\}\}"/>
+				        </items>
+				    </FlexBox>
+				    <FlexBox width="100%" id="box9" justifyContent="Center">
+				        <items>
+				        <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Tickets" id="button12" width="140px" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Tickets_Lista'\}\}\}"/>
+				        <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Soportes" id="button13" width="140px" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Soportes_Lista'\}\}\}"/>
+				        </items>
+				    </FlexBox>
+				    <FlexBox width="100%" id="box10" justifyContent="Center">
+				        <items>
+				        </items>
+				    </FlexBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

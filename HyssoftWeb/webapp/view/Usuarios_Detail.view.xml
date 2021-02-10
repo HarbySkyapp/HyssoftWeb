@@ -1,0 +1,27 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="HyssoftWeb.HyssoftWeb.controller.Usuarios_Detail" displayBlock="true">
+	<Page xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="detail" title="Detalles Usuario" showNavButton="true" navButtonPress="action" action:wiring="\{'navButtonPress':\{'navigation':\{'routeName':'Usuarios_Lista'\}\}\}">
+		<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form0">
+			 <sap.ui.layout.form:content>
+		        <sap.ui.core:Title text="Editar Consultor" id="title1"/>
+		        	<Label text="ID" id="NAME"/>
+					<Input width="100%" value="{ID}" id="ID" blocked="true"/>
+					<Label text="MANDANTE" id="IDENTIFICATION"/>
+					<Input width="100%" id="MANDANTE" value="{MANDANTE}"/>
+					<Label text="USUARIO" id="COUNTRY"/>
+					<Input width="100%" id="USUARIO" value="{USUARIO}"/>
+				     <Label text="CLAVE" id="CITY"/>
+				     <Input width="100%" id="CLAVE" value="{CLAVE}"/>
+				     <Label text="NIT" id="STREET"/>
+				     <Input width="100%" id="NIT_NIT" value="{NIT_NIT}"/>
+				     <Label text="AMBIENTE SAP" id="PHONE"/>
+				     <Input width="100%" id="AMBSAP_AMBSAP" value="{AMBSAP_AMBSAP}"/>
+		    </sap.ui.layout.form:content>
+		</sap.ui.layout.form:SimpleForm>
+		<FlexBox width="100%" id="box0" justifyContent="Center">
+		    <items>
+		        <Button xmlns="sap.m" text="Modificar" id="button0" press="modificarconsultor" width="150px"/>
+		        <Button xmlns="sap.m" text="Eliminar" id="button1" width="150px" press="onDelete0"/>
+		    </items>
+		</FlexBox>
+	</Page>
+</mvc:View>

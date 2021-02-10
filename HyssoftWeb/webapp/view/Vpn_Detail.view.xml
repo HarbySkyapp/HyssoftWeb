@@ -1,0 +1,28 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="HyssoftWeb.HyssoftWeb.controller.Vpn_Detail" displayBlock="true">
+	<Page xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="detail" title="Detalles Vpn" showNavButton="true" navButtonPress="action" action:wiring="\{'navButtonPress':\{'navigation':\{'routeName':'Consultores_Lista'\}\}\}">
+		<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form0">
+			 <sap.ui.layout.form:content>
+		        <sap.ui.core:Title text="Editar Vpn" id="title1"/>
+		        	<Label text="ID" id="id"/>
+					<Input width="100%" value="{ID}" id="ID"/>
+					<Label text="VPN" id="vpn"/>
+					<Input width="100%" id="VPN" value="{VPN}"/>
+					<Label text="USUARIO" id="usuario"/>
+					<Input width="100%" id="USUARIO" value="{USUARIO}"/>
+				     <Label text="CLAVE" id="clave"/>
+				     <Input width="100%" id="CLAVE" value="{CLAVE}"/>
+				     <Label text="INFORMACION" id="informacion"/>
+				     <Input width="100%" id="INFORMACION" value="{INFORMACION}"/>
+				     <Label text="NIT EMP" id="nit"/>
+				     <Input width="100%" id="NIT" value="{NIT_NIT}"/>
+		    </sap.ui.layout.form:content>
+		</sap.ui.layout.form:SimpleForm>
+		<FlexBox width="100%" id="box0" justifyContent="Center">
+		    <items>
+		        <Button xmlns="sap.m" text="Modificar" id="button0" press="modificarconsultor" width="150px"/>
+		        <Button xmlns="sap.m" text="Eliminar" id="button1" width="150px" press="onDelete0"/>
+		    </items>
+		</FlexBox>
+	<content/>
+	</Page>
+</mvc:View>

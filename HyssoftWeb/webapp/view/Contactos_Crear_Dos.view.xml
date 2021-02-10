@@ -1,0 +1,26 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="HyssoftWeb.HyssoftWeb.controller.Contactos_Crear_Dos">
+<Page xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="detail" showNavButton="true" title="{NOMBRE} - Crear Contacto" navButtonPress="handleListItemPress">
+		<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form0">
+			 <sap.ui.layout.form:content>
+		        	<Label text="NOMBRE" id="nombre"/>
+					<Input width="100%" id="NOMBRE"/>
+					<Label text="CARGO" id="cargo"/>
+					<Input width="100%" id="CARGO"/>
+					<Label text="EMAIL" id="email"/>
+					<Input width="100%" id="EMAIL"/>
+				     <Label text="TELEFONO 1" id="teluno"/>
+				     <Input width="100%" id="TELUNO"/>
+				     <Label text="TELEFONO 2" id="teldos"/>
+				     <Input width="100%" id="TELDOS"/>
+				     <Label text="NIT EMPRESA" id="NITT"/>
+				     <Input width="100%" id="NIT" value="{NIT}" blocked="true"/>
+		    </sap.ui.layout.form:content>
+		</sap.ui.layout.form:SimpleForm>
+		<FlexBox width="100%" id="box0" justifyContent="Center">
+		    <items>
+		        <Button xmlns="sap.m" text="Almacenar" id="button0" press="crearcontacto"/>
+		    </items>
+		</FlexBox>
+	<content/>
+	</Page>
+</mvc:View>

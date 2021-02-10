@@ -1,0 +1,27 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="HyssoftWeb.HyssoftWeb.controller.Aplicaciones_Crear">
+	<App>
+		<pages>
+			<Page xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" title="Agregar Aplicación" showNavButton="true" navButtonPress="action" action:wiring="\{'navButtonPress':\{'navigation':\{'routeName':'Aplicaciones_Lista'\}\}\}">
+				<content>
+					<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form0">
+						 <sap.ui.layout.form:content>
+					        <sap.ui.core:Title text="Editar Aplicacion" id="title1"/>
+					        	<Label text="CODIGO" id="CODIG"/>
+								<Input width="100%" value="{CODIGO}" id="CODIGO"/>
+								<Label text="NOMBRE" id="NAME"/>
+								<Input width="100%" id="NOMBRE" value="{NOMBRE}"/>
+								<Label text="PAQUETE" id="PAQUET"/>
+								<Input width="100%" id="PAQUETE" value="{PAQUETE}"/>
+							     
+					    </sap.ui.layout.form:content>
+					</sap.ui.layout.form:SimpleForm>
+					<FlexBox width="100%" id="box0" justifyContent="Center">
+					    <items>
+					        <Button xmlns="sap.m" text="Agregar" id="button0" width="150px" press="crearaplicacion"/>
+					    </items>
+					</FlexBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

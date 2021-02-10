@@ -1,0 +1,30 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="HyssoftWeb.HyssoftWeb.controller.Ticket_detail" displayBlock="true">
+	<Page xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="detail" title="{i18n>DetailTitle}" showNavButton="true" navButtonPress="action" action:wiring="\{'navButtonPress':\{'navigation':\{'routeName':'Tickets_Lista'\}\}\}">
+	
+		<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form0">
+			 <sap.ui.layout.form:content>
+		        <sap.ui.core:Title text="Editar ticket" id="title1"/>
+		        	<Label text="TICKET" id="ticket"/>
+					<Input width="100%" value="{TICKET}" id="TICKET"/>
+					<Label text="FECHA" id="fecha"/>
+					<Input width="100%" id="FECHA" value="{FECHA}"/>
+					<Label text="MODULO" id="modulo"/>
+					<Input width="100%" id="MODULO" value="{MODULO}"/>
+				     <Label text="DESCRIPCION" id="descripcion"/>
+				     <Input width="100%" id="DESCRIPCION" value="{DESCRIPCION}"/>
+				     <Label text="ESTADO CONTRATO" id="estadocontrato"/>
+				     <Input width="100%" id="ESTADOCONTRATO" value="{ESTADOCONTRATO}"/>
+				     <Label text="NIT EMPRESA" id="NIT"/>
+				     <Input width="100%" id="NIT_NIT" value="{NIT_NIT}"/>
+				     
+		    </sap.ui.layout.form:content>
+		</sap.ui.layout.form:SimpleForm>
+		<FlexBox width="100%" id="box0" justifyContent="Center">
+		    <items>
+		        <Button xmlns="sap.m" text="Modificar" id="button0" press="modificarticket" width="150px"/>
+		        <Button xmlns="sap.m" text="Eliminar" id="button1" width="150px" press="onDelete0"/>
+		    </items>
+		</FlexBox>
+	
+	</Page>
+</mvc:View>

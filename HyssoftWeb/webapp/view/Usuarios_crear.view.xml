@@ -1,0 +1,28 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="HyssoftWeb.HyssoftWeb.controller.Usuarios_crear">
+	<App>
+		<pages>
+			<Page title="Title" showNavButton="true" navButtonPress="action" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" action:wiring="\{'navButtonPress':\{'navigation':\{'routeName':'Usuarios_Lista'\}\}\}">
+				<content>
+					<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form0">
+						 <sap.ui.layout.form:content>
+					        <sap.ui.core:Title text="Editar Consultor" id="title1"/>
+					        	<Label text="ID" id="NAME"/>
+								<Input width="100%" id="ID"/>
+								<Label text="MANDANTE" id="IDENTIFICATION"/>
+								<Input width="100%" id="MANDANTE"/>
+								<Label text="USUARIO" id="COUNTRY"/>
+								<Input width="100%" id="USUARIO"/>
+							     <Label text="CLAVE" id="CITY"/>
+							     <Input width="100%" id="CLAVE"/>
+							     <Label text="NIT" id="STREET"/>
+							     <Input width="100%" id="NIT_NIT"/>
+							     <Label text="AMBIENTE SAP" id="PHONE"/>
+							     <Input width="100%" id="AMBSAP_AMBSAP"/>
+							     <Button xmlns="sap.m" text="Almacenar" id="button0" press="crearusuario"/>
+					    </sap.ui.layout.form:content>
+					</sap.ui.layout.form:SimpleForm>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

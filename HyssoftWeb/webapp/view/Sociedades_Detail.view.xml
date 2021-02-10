@@ -1,0 +1,23 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="HyssoftWeb.HyssoftWeb.controller.Sociedades_Detail" xmlns:html="http://www.w3.org/1999/xhtml">
+<Page xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="detail" title="{i18n>DetailTitle}" showNavButton="true" navButtonPress="action" action:wiring="\{'navButtonPress':\{'navigation':\{'routeName':'Sociedades_Lista'\}\}\}">
+	
+		<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form0">
+			 <sap.ui.layout.form:content>
+		        <sap.ui.core:Title text="Editar Sociedad" id="title1"/>
+		        	<Label text="ID" id="id"/>
+					<Input width="100%" value="{ID}" id="ID"/>
+					<Label text="SOCIEDAD" id="sociedad"/>
+					<Input width="100%" id="SOCIEDAD" value="{SOCIEDAD}"/>
+					<Label text="EMPRESA" id="nit"/>
+					<Input width="100%" id="NIT_NIT" value="{NIT_NIT}"/>
+		    </sap.ui.layout.form:content>
+		</sap.ui.layout.form:SimpleForm>
+		<FlexBox width="100%" id="box0" justifyContent="Center">
+		    <items>
+		        <Button xmlns="sap.m" text="Modificar" id="button0" press="modificarsociedad" width="150px"/>
+		        <Button xmlns="sap.m" text="Eliminar" id="button1" width="150px" press="onDelete0"/>
+		    </items>
+		</FlexBox>
+	
+	</Page>
+</mvc:View>

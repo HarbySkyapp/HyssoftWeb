@@ -1,0 +1,27 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="HyssoftWeb.HyssoftWeb.controller.Include_Detail" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="detail" title="{i18n>DetailTitle}" showNavButton="true" navButtonPress="action" action:wiring="\{'navButtonPress':\{'navigation':\{'routeName':'Include_Lista'\}\}\}">
+	
+		<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form0">
+			 <sap.ui.layout.form:content>
+		        <sap.ui.core:Title text="Editar Include" id="title1"/>
+		        	<Label text="NOMBRE" id="nombre"/>
+					<Input width="60%" value="{NOMBRE}" id="NOMBRE"/>
+					<Label text="DESCRIPCION" id="descripcion"/>
+					<Input width="60%" id="DESCRIPCION" value="{DESCRIPCION}"/>
+					<Label text="FECHA" id="fecha"/>
+					<Input width="60%" id="FECHA" value="{FECHA}" type= "Date"/>
+					<Label text="PROGRAMA" id="programa_nombre"/>
+					<Input width="60%" id="PROGRAMA_NOMBRE" value="{PROGRAMA_NOMBRE}"/>
+					<Label text="CONSULTOR" id="consultor"/>
+					<Input width="60%" id="CONSULTOR_CEDULA" value="{CONSULTOR_CEDULA}"/>
+		    </sap.ui.layout.form:content>
+		</sap.ui.layout.form:SimpleForm>
+		<FlexBox width="60%" id="box0" justifyContent="Center">
+		    <items>
+		        <Button xmlns="sap.m" text="Modificar" id="button0" press="modificarinclude" width="150px"/>
+		        <Button xmlns="sap.m" text="Eliminar" id="button1" width="150px" press="onDelete0"/>
+		    </items>
+		</FlexBox>
+	
+	</Page>
+</mvc:View>

@@ -1,0 +1,32 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="HyssoftWeb.HyssoftWeb.controller.Vpn_Lista">
+	<App>
+		<pages>
+			<Page title="Vpn" showNavButton="true" navButtonPress="action" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" action:wiring="\{'navButtonPress':\{'navigation':\{'routeName':'menu'\}\}\}">
+				<content>
+					<Panel>
+						<headerToolbar>
+							<Toolbar>
+								<Title/>
+								<ToolbarSpacer/>
+								<SearchField width="50%" search=".onFilterProducts" placeholder="Buscar Vpn"/>
+							</Toolbar>
+						</headerToolbar>
+						<Panel>
+					    	<headerToolbar>
+		                        <OverflowToolbar>
+		                            <ToolbarSpacer/>
+		                            <OverflowToolbarButton xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" type="Transparent" icon="sap-icon://add" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Empresas_Crear'\}\}\}"/>
+		                        </OverflowToolbar>
+		                    </headerToolbar>
+						</Panel>
+					    <List xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" noDataText="Drop list items here" items="{ path: '/Vpn'}" id="Vpn" cd:w5g.dt.context="/Vpn">
+					        <items>
+					            <StandardListItem type="Navigation" icon="sap-icon://building" id="item1" title="{VPN}" description="{INFORMACION}" press="handleListItemPress"/>
+					        </items>
+					    </List>
+					</Panel>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

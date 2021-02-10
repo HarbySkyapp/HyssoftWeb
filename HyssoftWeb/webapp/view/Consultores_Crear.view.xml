@@ -1,0 +1,43 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="HyssoftWeb.HyssoftWeb.controller.Consultores_Crear">
+	<App>
+		<pages>
+			<Page title="Agregar Consultor" showNavButton="true" navButtonPress="action" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" action:wiring="\{'navButtonPress':\{'navigation':\{'routeName':'Consultores_Lista'\}\}\}">
+				<content>
+					<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout" id="form0">
+				        <sap.ui.layout.form:content>
+				            <core:Title text="Title" id="title0"/>
+				            
+				            <Label text="NOMBRE" id="NAME"/>
+				            <Input width="100%" id="NOMBRE"/>
+				            
+				            <Label text="CEDULA" id="IDENTIFICATION"/>
+				            <Input width="100%" id="CEDULA"/>
+				            
+				            <Label text="CARGO" id="POSITION"/>
+				            <Input width="100%" id="CARGO"/>
+				            
+				            <Label text="CIUDAD" id="CITY"/>
+				            <Input width="100%" id="CIUDAD"/>
+				            
+				            <Label text="PAIS" id="COUNTRY"/>
+				            <Input width="100%" id="PAIS"/>
+				            
+				            <Label text="TELEFONO" id="PHONE"/>
+				            <Input width="100%" id="TELEFONO"/>
+				            
+				            <Label text="CELULAR" id="CELLPHONE"/>
+				            <Input width="100%" id="CELULAR"/>
+				            
+				            <RadioButtonGroup id = "rbgtype">
+				            	<RadioButton text = "Activo" selected = "Activo" /> 
+				            	<RadioButton text = "No Activo" selected = "No Activo" />
+				            </RadioButtonGroup> 
+				            
+				            <Button xmlns="sap.m" text="Almacenar" id="button0" press="crearconsultor"/>
+				         </sap.ui.layout.form:content>
+				    </sap.ui.layout.form:SimpleForm>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

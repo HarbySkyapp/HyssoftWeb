@@ -1,0 +1,32 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="HyssoftWeb.HyssoftWeb.controller.Soportes_Lista">
+	<App>
+		<pages>
+			<Page xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" title="Soporte" showNavButton="true" navButtonPress="action" action:wiring="\{'navButtonPress':\{'navigation':\{'routeName':'menu'\}\}\}">
+				<content>
+					<Panel>
+						<headerToolbar>
+							<Toolbar>
+								<Title/>
+								<ToolbarSpacer/>
+								<SearchField width="50%" search=".onFilterProducts" placeholder="Buscar Soporte"/>
+							</Toolbar>
+						</headerToolbar>
+						<Panel>
+					    	<headerToolbar>
+		                        <OverflowToolbar>
+		                            <ToolbarSpacer/>
+		                            <OverflowToolbarButton xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" type="Transparent" icon="sap-icon://add" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Soportes_crear'\}\}\}"/>
+		                        </OverflowToolbar>
+		                    </headerToolbar>
+						</Panel>
+					    <List xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" noDataText="Drop list items here" items="{ path: '/Soporte'}" id="Includes" cd:w5g.dt.context="/Empresas">
+					        <items>
+					            <StandardListItem type="Navigation" icon="sap-icon://cancel-maintenance" id="item1" title="{TICKET_TICKET}" description="{FECHA}" press="handleListItemPress"/>
+					        </items>
+					    </List>
+					</Panel>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

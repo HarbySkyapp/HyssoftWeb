@@ -1,0 +1,140 @@
+<mvc:View xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="HyssoftWeb.HyssoftWeb.controller.Empresas_Detail" height="100%">
+	<Page xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="idPage" title=" Detalles de empresa" class="sapUiResponsivePadding--header" showNavButton="true" navButtonPress="action" action:wiring="\{'navButtonPress':\{'navigation':\{'routeName':'Empresas_Lista'\}\}\}">
+		<!-- this CSS class add a standard spacing to all the page content -->
+		<content>
+			<ObjectHeader backgroundDesign="Solid" number="{CIUDAD}" numberUnit="{DIRECCION}" intro="{NOMBRE}" icon="sap-icon://building" titleLevel="H6" title="{NIT}">
+				<attributes>
+					<ObjectAttribute title="Versión Penta" text="{VERSPE}"/>
+					<ObjectAttribute title="Fecha Inicio" text="{FECHAINI}"/>
+					<ObjectAttribute title="Fecha Final " text="{FECHAFIN}"/>
+					<ObjectAttribute title="Días de Consultoría" text="{DIASCONS}"/>
+					<ObjectAttribute title="Días de Pago" text="{DPAGO}"/>
+					<ObjectAttribute title="Día Máximo" text="{D_MAX}"/>
+				</attributes>
+				<statuses>
+					<ObjectStatus title="Fecha Ultima Actualización" text="{FECULTAC}"/>
+					<ObjectStatus title="Contrato Vigente" text="{CONTVIG}"/>
+					<ObjectStatus title="No Contrato" text="{NROCONTRA}"/>
+					<ObjectStatus title="Ultima Factura V" text="{ULTFV}"/>
+					<ObjectStatus title="Fecha Factura V" text="{FECHAFV}"/>
+				</statuses>
+			</ObjectHeader>
+			<IconTabBar expanded="{device>/isNoPhone}" class="sapUiSmallMarginBottom sapUiResponsiveContentPadding">
+				<items>
+					<!-- PAGINACION DE CONTACTOS-->
+					<IconTabFilter text="Contactos" icon="sap-icon://business-card">
+						<Panel>
+					    	<headerToolbar>
+		                        <OverflowToolbar>
+		                            <ToolbarSpacer/>
+		                            <OverflowToolbarButton xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" type="Transparent" icon="sap-icon://add" press="handleListItemPressContactos"/>
+		                        </OverflowToolbar>
+		                    </headerToolbar>
+						</Panel>
+						<List xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" noDataText="No hay contactos relacionados a esta empresa" items="{empresa_Contactos}" id="Contactos" cd:w5g.dt.context="/Empresas">
+					        <items>
+					            <StandardListItem type="Navigation" icon="sap-icon://business-card" id="item1" title="{NOMBRE}" description="{CARGO}" press="handleListItemPress"/>
+					        </items>
+					    </List>
+					</IconTabFilter>
+					<!-- PAGINACION DE VPN-->
+					<IconTabFilter text="VPN" icon="sap-icon://org-chart">
+						<Panel>
+					    	<headerToolbar>
+		                        <OverflowToolbar>
+		                            <ToolbarSpacer/>
+		                            <OverflowToolbarButton xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" type="Transparent" icon="sap-icon://add" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Empresas_Crear'\}\}\}"/>
+		                        </OverflowToolbar>
+		                    </headerToolbar>
+						</Panel>
+						<List xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" noDataText="No hay VPN relacionadas a esta empresa" items="{Empresa_VPN}" id="Vpn" cd:w5g.dt.context="/Vpn">
+					        <items>
+					            <StandardListItem type="Navigation" icon="sap-icon://org-chart" id="vpn" title="{VPN}" description="{INFORMACION}" press="handleListItemPress"/>
+					        </items>
+					    </List>
+					</IconTabFilter>
+					<!-- PAGINACION DE SOCIEDADES-->
+					<IconTabFilter text="Sociedades" icon="sap-icon://dimension">
+						<Panel>
+					    	<headerToolbar>
+		                        <OverflowToolbar>
+		                            <ToolbarSpacer/>
+		                            <OverflowToolbarButton xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" type="Transparent" icon="sap-icon://add" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Sociedad_crear'\}\}\}"/>
+		                        </OverflowToolbar>
+		                    </headerToolbar>
+						</Panel>
+					    <List xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" noDataText="No hay sociedades relacionadas a esta empresa" items="{empresa_sociedades}" id="Includes" cd:w5g.dt.context="/Empresas">
+					        <items>
+					            <StandardListItem type="Navigation" icon="sap-icon://dimension" id="sociedades" title="{SOCIEDAD}" description="{NIT_NIT}" press="handleListItemPress"/>
+					        </items>
+					    </List>
+					</IconTabFilter>
+					<!-- PAGINACION DE USUARIOS-->
+					<IconTabFilter text="Usuarios" icon="sap-icon://employee">
+						<Panel>
+					    	<headerToolbar>
+		                        <OverflowToolbar>
+		                            <ToolbarSpacer/>
+		                            <OverflowToolbarButton xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" type="Transparent" icon="sap-icon://add" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Usuarios_crear'\}\}\}"/>
+		                        </OverflowToolbar>
+		                    </headerToolbar>
+						</Panel>
+					    <List xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" noDataText="No hay usuarios relacionados a esta empresa" items="{empresa_usuario}" id="Usuarios" cd:w5g.dt.context="/Empresas">
+					        <items>
+					            <StandardListItem type="Navigation" icon="sap-icon://employee" id="usuarios" title="{ID}" description="{USUARIO}" press="handleListItemPress"/>
+					        </items>
+					    </List>
+					</IconTabFilter>
+					<!-- PAGINACION DE PENTA-->
+					<IconTabFilter text="Penta" icon="sap-icon://business-objects-mobile">
+						<Panel>
+					    	<headerToolbar>
+		                        <OverflowToolbar>
+		                            <ToolbarSpacer/>
+		                            <OverflowToolbarButton xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" type="Transparent" icon="sap-icon://add" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Usuarios_crear'\}\}\}"/>
+		                        </OverflowToolbar>
+		                    </headerToolbar>
+						</Panel>
+					    <List xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" noDataText="No hay penta relacionado a esta empresa" items="{empresa_penta}" id="pentaempresa" cd:w5g.dt.context="/Empresas">
+					        <items>
+					           <StandardListItem type="Navigation" icon="sap-icon://business-objects-mobile" id="penta" title="{DESCRIPCION}" description="{NIT_NIT}" press="handleListItemPress"/>
+					        </items>
+					    </List>
+					</IconTabFilter>
+					<!-- PAGINACION DE AMBIENTE SAP-->
+					<IconTabFilter text="Ambiente SAP" icon="sap-icon://accounting-document-verification">
+						<Panel>
+					    	<headerToolbar>
+		                        <OverflowToolbar>
+		                            <ToolbarSpacer/>
+		                            <OverflowToolbarButton xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" type="Transparent" icon="sap-icon://add" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Usuarios_crear'\}\}\}"/>
+		                        </OverflowToolbar>
+		                    </headerToolbar>
+						</Panel>
+					    <List xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" noDataText="No hay penta relacionado a esta empresa" items="{empresa_ambsap}" id="ambsap" cd:w5g.dt.context="/Empresas">
+					        <items>
+					           <StandardListItem type="Navigation" icon="sap-icon://accounting-document-verification" id="ambientesap" title="Ambiente: {AMBSAP}" description="Empresa: {NIT_NIT}" press="handleListItemPress"/>
+					        </items>
+					    </List>
+					</IconTabFilter>
+					<!-- PAGINACION DE TICKET-->
+					<IconTabFilter text="Tickets" icon="sap-icon://settings">
+						<Panel>
+					    	<headerToolbar>
+		                        <OverflowToolbar>
+		                            <ToolbarSpacer/>
+		                            <OverflowToolbarButton xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" type="Transparent" icon="sap-icon://add" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Usuarios_crear'\}\}\}"/>
+		                        </OverflowToolbar>
+		                    </headerToolbar>
+						</Panel>
+					    <List xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" noDataText="No hay Tickets generados a esta empresa" items="{empresa_ticket}" id="ticket" cd:w5g.dt.context="/Empresas">
+					        <items>
+					            <StandardListItem type="Navigation" icon="sap-icon://settings" id="tickets" title="{TICKET}" description="{DESCRIPCION}" press="handleListItemPress"/>
+					        </items>
+					    </List>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</content>
+	</Page>
+</mvc:View>
