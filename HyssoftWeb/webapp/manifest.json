@@ -652,6 +652,10 @@
 				"prueba": {
 					"viewType": "XML",
 					"viewName": "prueba"
+				},
+				"Empresas_Editar": {
+					"viewType": "XML",
+					"viewName": "Empresas_Editar"
 				}
 			}
 		}
