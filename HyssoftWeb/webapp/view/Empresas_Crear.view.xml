@@ -5,39 +5,39 @@
 				<content>
 					<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form0">
 						 <sap.ui.layout.form:content>
-					        <sap.ui.core:Title text="Editar Consultor" id="title1"/>
+					        <sap.ui.core:Title icon="sap-icon://offsite-work" text="Agregar Empresa" id="title1"/>
 					        	<Label text="NOMBRE" id="NAME"/>
-								<Input width="100%" value="{NOMBRE}" id="NOMBRE"/>
+								<Input width="60%" value="{NOMBRE}" id="NOMBRE"/>
 								<Label text="NIT" id="IDENTIFICATION"/>
-								<Input width="100%" id="NIT" value="{NIT}"/>
+								<Input width="60%" id="NIT" value="{NIT}"/>
 								<Label text="PAIS" id="COUNTRY"/>
-								<Input width="100%" id="PAIS" value="{PAIS}"/>
+								<Input width="60%" id="PAIS" value="{PAIS}"/>
 							     <Label text="CIUDAD" id="CITY"/>
-							     <Input width="100%" id="CIUDAD" value="{CIUDAD}"/>
+							     <Input width="60%" id="CIUDAD" value="{CIUDAD}"/>
 							     <Label text="DIRECCIÓN" id="STREET"/>
-							     <Input width="100%" id="DIRECCION" value="{DIRECCION}"/>
+							     <Input width="60%" id="DIRECCION" value="{DIRECCION}"/>
 							     <Label text="VERSIÓN PENTA" id="PHONE"/>
-							     <Input width="100%" id="VERSPE" value="{VERSPE}"/>
+							     <Input width="60%" id="VERSPE" value="{VERSPE}"/>
 							     <Label text="FECHA ULTIMA ACTUALIZACIÓN" id="CELLPHONE"/>
-							     <Input width="100%" id="FECULTAC" value="{FECULTAC}" type="Date"/>
+							     <Input width="60%" id="FECULTAC" value="{FECULTAC}" type="Date"/>
 							     <Label text="CONTRATO VIGENTE" id="CONTVIGG"/>
-							     <Input width="100%" id="CONTVIG" value="{CONTVIG}"/>
+							     <Input width="60%" id="CONTVIG" value="{CONTVIG}"/>
 							     <Label text="FECHA INICIO" id="DATEINI"/>
-							     <Input width="100%" id="FECHAINI" value="{FECHAINI}" type="Date"/>
+							     <Input width="60%" id="FECHAINI" value="{FECHAINI}" type="Date"/>
 							     <Label text="FECHA FINAL" id="DATEFIN"/>
-							     <Input width="100%" id="FECHAFIN" value="{FECHAFIN}" type="Date"/>
+							     <Input width="60%" id="FECHAFIN" value="{FECHAFIN}" type="Date"/>
 							     <Label text="NUMERO DE CONTRATO" id="NROCONTRATO"/>
-							     <Input width="100%" id="NROCONTRA" value="{NROCONTRA}"/>
+							     <Input width="60%" id="NROCONTRA" value="{NROCONTRA}"/>
 							     <Label text="DÍAS MÁXIMOS" id="D_MAXIMO"/>
-							     <Input width="100%" id="D_MAX" value="{D_MAX}"/>
+							     <Input width="60%" id="D_MAX" value="{D_MAX}"/>
 							     <Label text="DÍAS CONSULTA" id="DIASCONSULTA"/>
-							     <Input width="100%" id="DIASCONS" value="{DIASCONS}"/>
+							     <Input width="60%" id="DIASCONS" value="{DIASCONS}"/>
 							     <Label text="DÍA PAGO" id="DIAPAGO"/>
-							     <Input width="100%" id="DPAGO" value="{DPAGO}"/>
+							     <Input width="60%" id="DPAGO" value="{DPAGO}"/>
 							     <Label text="ÚLTIMA FACTURA" id="ULTFVI"/>
-							     <Input width="100%" id="ULTFV" value="{ULTFV}"/>
+							     <Input width="60%" id="ULTFV" value="{ULTFV}"/>
 							     <Label text="FECHA ÚLTIMA FACTURA" id="FECHAFVI"/>
-							     <Input width="100%" id="FECHAFV" value="{FECHAFV}" type="Date"/>
+							     <Input width="60%" id="FECHAFV" value="{FECHAFV}" type="Date"/>
 					    </sap.ui.layout.form:content>
 					</sap.ui.layout.form:SimpleForm>
 					<FlexBox width="100%" id="box0" justifyContent="Center">

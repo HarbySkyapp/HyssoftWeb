@@ -21,6 +21,14 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller, MessageToast
 				}
 			});
 		},
+		handleListItemPressProgramas: function (oEvent) {
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			MessageToast.show("Actualización exitosa!");
+			var selectedCODIGO = oEvent.getSource().getBindingContext().getProperty("CODIGO");
+			oRouter.navTo("aplicaciones_crear_prog", {
+				CODIGO: selectedCODIGO
+			});
+		},
 
 		onDelete0: function (oEvent) {
 			var Empresas = oEvent.getSource().getBindingContext().getObject();
@@ -65,13 +73,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller, MessageToast
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("home");
 		},
-		/**
-		 *@memberOf Hyssoft.Hyssoft.controller.Detail
-		 */
 
-		/**
-		 *@memberOf HyssoftWeb.HyssoftWeb.controller.Consultores_Detail
-		 */
 		action: function (oEvent) {
 			var that = this;
 			var actionParameters = JSON.parse(oEvent.getSource().data("wiring").replace(/'/g, "\""));

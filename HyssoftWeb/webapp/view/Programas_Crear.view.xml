@@ -5,13 +5,13 @@
 				<content>
 					<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form0">
 						 <sap.ui.layout.form:content>
-					        <sap.ui.core:Title text="Editar Consultor" id="title1"/>
+					        <sap.ui.core:Title text="agregar programa" id="title1"/>
 					        	<Label text="NOMBRE" id="NAME"/>
 								<Input width="100%" value="{NOMBRE}" id="NOMBRE"/>
 								<Label text="DESCRIPCION" id="DESCRIPTION"/>
 								<Input width="100%" id="DESCRIPCION" value="{DESCRIPCION}"/>
-								<Label text="CODIGO_CODIGO" id="CODIGO"/>
-								<Input width="100%" id="CODIGO_CODIGO" value="{CODIGO_CODIGO}"/>
+								<Label text="CODIGO" id="CODIGO"/>
+								<Input width="100%" id="CODIGO_CODIGO" value="{CODIGO}"/>
 					    </sap.ui.layout.form:content>
 					</sap.ui.layout.form:SimpleForm>
 					<FlexBox width="100%" id="box0" justifyContent="Center">

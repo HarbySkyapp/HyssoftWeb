@@ -11,7 +11,7 @@ sap.ui.define([
 		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 		 * @memberOf HyssoftWeb.HyssoftWeb.view.Soportes_Lista
 		 */
-	onInit: function () {},
+		onInit: function () {},
 		handleListItemPress: function (oEvent) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			var selectedTICKET = oEvent.getSource().getBindingContext().getProperty("TICKET_TICKET");

@@ -11,7 +11,7 @@
 					    </FlexBox>
 					    <FlexBox width="100%" id="box1" justifyContent="Center">
 					        <items>
-					            <Button xmlns="sap.m" text="Ingresar" id="button0" press="action" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" action:wiring="\{'press':\{'navigation':\{'routeName':'menu'\}\}\}"/>
+					            <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Ingresar" id="button0" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'procesos'\}\}\}"/>
 					        </items>
 					    </FlexBox>
 					</content>

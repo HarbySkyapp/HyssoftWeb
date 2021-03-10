@@ -1,0 +1,31 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="HyssoftWeb.HyssoftWeb.controller.Tickets_consulta">
+	<App>
+		<pages>
+			<Page title="Title">
+				<content>
+					<Panel content="{/Ticket}">
+						<headerToolbar>
+							<Toolbar>
+								<Title/>
+								<ToolbarSpacer/>
+								<SearchField width="50%" search=".onFilterProducts" placeholder="Buscar Parametro Penta"/>
+							</Toolbar>
+						</headerToolbar>
+					<content>
+					    <ObjectListItem type="Active" title="{TICKET}" number="9999999999" numberUnit="eur" intro="On behalf of John Doe" id="TICKET">
+					    <attributes>
+					        <ObjectAttribute text="attribute text" id="attribute1"/>
+					    </attributes>
+					    <firstStatus>
+					        <ObjectStatus text="first status text" id="status2"/>
+					    </firstStatus>
+					    <secondStatus>
+					        <ObjectStatus text="second status text" id="status3"/>
+					    </secondStatus></ObjectListItem>
+					</content>
+					</Panel>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

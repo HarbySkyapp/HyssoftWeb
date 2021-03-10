@@ -327,6 +327,13 @@
 					]
 				},
 				{
+					"name": "Programas_CrearApli",
+					"pattern": "AppHyssoft/{CODIGO}",
+					"target": [
+						"targetProgramas_CrearApli"
+					]
+				},
+				{
 					"name": "Penta_Crear",
 					"pattern": "Penta_Crear",
 					"target": [
@@ -408,6 +415,48 @@
 					"pattern": "Empresa/{NIT}",
 					"target": [
 						"TargetContactosDetailDos"
+					]
+				},
+				{
+					"name": "Empresas_Editar_Modifi",
+					"pattern": "Empres/{NIT}",
+					"target": [
+						"TargetEmpresasCrearDos"
+					]
+				},
+				{
+					"name": "procesos",
+					"pattern": "procesos",
+					"target": [
+						"procesos"
+					]
+				},
+				{
+					"name": "menu1",
+					"pattern": "menu1",
+					"target": [
+						"menu1"
+					]
+				},
+				{
+					"name": "menu2",
+					"pattern": "menu2",
+					"target": [
+						"menu2"
+					]
+				},
+				{
+					"name": "Consultores_Detail",
+					"pattern": "Consultores_Detail",
+					"target": [
+						"TargetDetail"
+					]
+				},
+				{
+					"name": "aplicaciones_crear_prog",
+					"pattern": "AppHyssoft/{CODIGO}",
+					"target": [
+						"targetaplicaciones_crear_prog"
 					]
 				}
 			],
@@ -506,6 +555,12 @@
 					"transition": "slide",
 					"clearControlAggregation": false,
 					"viewName": "Contactos_Crear_Dos"
+				},
+				"TargetEmpresasCrearDos": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Empresas_Editar"
 				},
 				"TargetSoportescrear": {
 					"viewType": "XML",
@@ -655,7 +710,31 @@
 				},
 				"Empresas_Editar": {
 					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
 					"viewName": "Empresas_Editar"
+				},
+				"targetaplicaciones_crear_prog": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "aplicaciones_crear_prog"
+				},
+				"procesos": {
+					"viewType": "XML",
+					"viewName": "procesos"
+				},
+				"menu1": {
+					"viewType": "XML",
+					"viewName": "menu1"
+				},
+				"menu2": {
+					"viewType": "XML",
+					"viewName": "menu2"
+				},
+				"Menu3": {
+					"viewType": "XML",
+					"viewName": "Menu3"
 				}
 			}
 		}

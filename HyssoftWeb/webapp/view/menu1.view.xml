@@ -1,0 +1,46 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:microchart="sap.suite.ui.microchart" controllerName="HyssoftWeb.HyssoftWeb.controller.menu1">
+	<Page title="Tablas Maestras" backgroundDesign="Solid" showNavButton="true" navButtonPress="action" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" action:wiring="\{'navButtonPress':\{'navigation':\{'routeName':'procesos'\}\}\}">
+		<layout:VerticalLayout class="sapUiResponsiveMargin">
+		
+		</layout:VerticalLayout>
+		<FlexBox width="100%" id="box1" justifyContent="Center">
+		    <items>
+		        <GenericTile xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Aplicaciones Hyssoft" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Aplicaciones_Lista'\}\}\}" backgroundImage="Img/aplicaciones.png">
+				</GenericTile>
+		        <GenericTile xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Empresas" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Empresas_Lista'\}\}\}" backgroundImage="Img/empresas.png">
+				</GenericTile>
+		        <GenericTile xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Sociedades" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Sociedades_Lista'\}\}\}" backgroundImage="Img/sociedad.png">
+				</GenericTile>
+				<GenericTile xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Contactos" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Contactos_Lista'\}\}\}" backgroundImage="Img/contactos.png">
+				</GenericTile>
+		    </items>
+		</FlexBox>
+		
+		<FlexBox width="100%" id="box2" justifyContent="Center">
+		    <items>
+		        <GenericTile xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Usuarios" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Usuarios_Lista'\}\}\}" backgroundImage="Img/usuarios.png">
+				</GenericTile><GenericTile xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="VPN" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Vpn_Lista'\}\}\}" backgroundImage="Img/vpn.png">
+				</GenericTile>
+				<GenericTile xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Ambiente SAP" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Ambientes_Lista'\}\}\}" backgroundImage="Img/ambsap.png">
+				</GenericTile>
+				<GenericTile xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Consultores" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Consultores_Lista'\}\}\}" backgroundImage="Img/consultores.png">
+					
+				</GenericTile>
+		    </items>
+		</FlexBox>
+		
+		<FlexBox width="100%" id="box3" justifyContent="Center">
+		    <items>
+		        <GenericTile xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Parámetros Penta" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Parametros_Lista'\}\}\}" backgroundImage="Img/parametros.png">
+				</GenericTile>
+		        <GenericTile xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Penta" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Penta_Lista'\}\}\}" backgroundImage="Img/penta.png">
+				</GenericTile>
+				<GenericTile xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Include" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Include_Lista'\}\}\}" backgroundImage="Img/include.png">
+				</GenericTile>
+				<GenericTile xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Programas" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Programas_Lista'\}\}\}" backgroundImage="Img/programas.png">
+				</GenericTile>
+		    </items>
+		</FlexBox>
+	<content/>
+	</Page>
+</mvc:View>

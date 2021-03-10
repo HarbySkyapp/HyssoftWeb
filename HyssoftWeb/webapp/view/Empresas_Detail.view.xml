@@ -2,6 +2,12 @@
 	<Page xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="idPage" title=" Detalles de empresa" class="sapUiResponsivePadding--header" showNavButton="true" navButtonPress="action" action:wiring="\{'navButtonPress':\{'navigation':\{'routeName':'Empresas_Lista'\}\}\}">
 		<!-- this CSS class add a standard spacing to all the page content -->
 		<content>
+			<FlexBox width="100%" id="box0" justifyContent="End">
+			    <items>
+			    	<OverflowToolbarButton tooltip="Delete" text="Delete" icon="sap-icon://delete" press="onDelete0"/>
+			    	<OverflowToolbarButton tooltip="Edit" text="Edit" icon="sap-icon://edit" press="handleListItemPressEditarEmpresa"/>
+			    </items>
+			</FlexBox>
 			<ObjectHeader backgroundDesign="Solid" number="{CIUDAD}" numberUnit="{DIRECCION}" intro="{NOMBRE}" icon="sap-icon://building" titleLevel="H6" title="{NIT}">
 				<attributes>
 					<ObjectAttribute title="Versión Penta" text="{VERSPE}"/>

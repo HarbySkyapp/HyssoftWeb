@@ -1,0 +1,35 @@
+{
+    "Name": "HyssoftWeb",
+    "CardClass": "HtmlTemplate",
+    "CustomType": "Query",
+    "UrlMatch": null,
+    "QueryURL": "",
+    "GroupName": null,
+    "AppLaunchUrl": null,
+    "QueryReturnsEntityCollection": true,
+    "CollectionType": "useCollection",
+    "QueryConfiguration": {
+        "CacheQueryResult": false,
+        "QueryEntityKeyPaths": [],
+        "QueryURLCollectionRoot": ""
+    },
+    "ResourceIdentifiers": [],
+    "ActionConfiguration": null,
+    "Parameters": null,
+    "NotificationMessages": null,
+    "NotificationRules": [],
+    "APNSEnabled": true,
+    "QueryInterval": null,
+    "RefreshInterval": null,
+    "Connection": "",
+    "AutoSubscribe": false,
+    "HiddenSubscription": false,
+    "SubscribableTo": {
+        "Users": []
+    },
+    "Locked": false,
+    "CardRenderer": "UI5",
+    "RouteName": "",
+    "QueryType": "upToDate",
+    "RefreshType": "upToDate"
+}

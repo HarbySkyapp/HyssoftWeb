@@ -11,7 +11,7 @@ sap.ui.define([
 		 * @memberOf HyssoftWeb.HyssoftWeb.view.Programas_Lista
 		 */
 		onInit: function () {},
-		
+
 		handleListItemPress: function (oEvent) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			var selectedNOMBRE = oEvent.getSource().getBindingContext().getProperty("NOMBRE");

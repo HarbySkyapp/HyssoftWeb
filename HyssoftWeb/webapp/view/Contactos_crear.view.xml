@@ -25,7 +25,7 @@
 				            <Label text="Empresa" id="nit"/>
 				            <Input width="100%" id="NIT_"/>
 				            
-				           <ComboBox items="{path: '/Empresas', sorter: { path: 'NOMBRE' }}" id="NIT_NIT" value="{NIT}">
+				            <ComboBox items="{path: '/Empresas', sorter: { path: 'NOMBRE' }}" id="NIT_NIT" value="{NIT}">
 								<core:Item key="{NIT}" text="{NOMBRE}"/>
 							</ComboBox>
 				            

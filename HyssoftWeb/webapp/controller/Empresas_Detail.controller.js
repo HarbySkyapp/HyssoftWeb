@@ -21,6 +21,15 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller, MessageToast
 				}
 			});
 		},
+
+		handleListItemPressEditarEmpresa: function (oEvent) {
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			var selectedNIT = oEvent.getSource().getBindingContext().getProperty("NIT");
+			oRouter.navTo("Empresas_Editar_Modifi", {
+				NIT: selectedNIT
+			});
+		},
+
 		handleListItemPressContactos: function (oEvent) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			var selectedNIT = oEvent.getSource().getBindingContext().getProperty("NIT");

@@ -21,6 +21,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 				oRouter.navTo("Programas_Lista");
 			}
+			
 			/**
 			 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
 			 * (NOT before the first rendering! onInit() is used for that one!).

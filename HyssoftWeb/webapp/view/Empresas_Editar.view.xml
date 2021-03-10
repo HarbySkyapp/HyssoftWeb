@@ -1,10 +1,59 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
-	controllerName="HyssoftWeb.HyssoftWeb.controller.Empresas_Editar" xmlns:html="http://www.w3.org/1999/xhtml">
-	<App>
-		<pages>
-			<Page title="Title" showNavButton="true">
-				<content></content>
-			</Page>
-		</pages>
-	</App>
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="HyssoftWeb.HyssoftWeb.controller.Empresas_Editar" displayBlock="true">
+	<Page xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="detail" title="Editar Empresa - {NOMBRE}" showNavButton="true" navButtonPress="handleListItemPress">
+		<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form0">
+			 <sap.ui.layout.form:content>
+		        	<Label text="NIT" id="NITT"/>
+					<Input width="100%" value="{NIT}" id="NIT" blocked="true"/>
+					
+					<Label text="NOMBRE" id="NAME"/>
+					<Input width="100%" id="NOMBRE" value="{NOMBRE}"/>
+					
+					<Label text="PAIS" id="COUNTRY"/>
+					<Input width="100%" id="PAIS" value="{PAIS}"/>
+					
+					<Label text="CIUDAD 1" id="CITY"/>
+					<Input width="100%" id="CIUDAD" value="{CIUDAD}"/>
+					
+					<Label text="DIRECCIÓN 2" id="STREET"/>
+					<Input width="100%" id="DIRECCION" value="{DIRECCION}"/>
+					
+					<Label text="VERSIÓN PENTA" id="VERSPENTA"/>
+					<Input width="100%" id="VERSPE" value="{VERSPE}"/>
+					
+					<Label text="FECHA ULTIMA ACTUALIZACIÓN" id="FECULTACT"/>
+					<Input width="100%" id="FECULTAC" value="{FECULTAC}"/>
+					
+					<Label text="CONTRATO VIGENTE" id="CONTVIGENTE"/>
+					<Input width="100%" id="CONTVIG" value="{CONTVIG}"/>
+					
+					<Label text="FECHA INICIO" id="FECHAINICIO"/>
+					<Input width="100%" id="FECHAINI" value="{FECHAINI}"/>
+					
+					<Label text="FECHA FINAL" id="FECHAFINAL"/>
+					<Input width="100%" id="FECHAFIN" value="{FECHAFIN}"/>
+					
+					<Label text="DÍA MAXIMO" id="D_MAXIMO"/>
+					<Input width="100%" id="D_MAX" value="{D_MAX}"/>
+					
+					<Label text="DÍAS CONSULTORÍA" id="DIASCONSULTORIA"/>
+					<Input width="100%" id="DIASCONS" value="{DIASCONS}"/>
+					
+					<Label text="DÍA DE PAGO" id="DIAPAGO"/>
+					<Input width="100%" id="DPAGO" value="{DPAGO}"/>
+					
+					<Label text="ULTIMA FACTURA V" id="ULTFACTV"/>
+					<Input width="100%" id="ULTFV" value="{ULTFV}"/>
+					
+					<Label text="FECHA FACTURA V" id="FECHAFACTV"/>
+					<Input width="100%" id="FECHAFV" value="{FECHAFV}"/>
+				     
+		    </sap.ui.layout.form:content>
+		</sap.ui.layout.form:SimpleForm>
+		<FlexBox width="100%" id="box0" justifyContent="Center">
+		    <items>
+		        <Button xmlns="sap.m" text="Modificar" id="button0" width="150px" press="update"/>
+		    </items>
+		</FlexBox>
+	<content/>
+	</Page>
 </mvc:View>
